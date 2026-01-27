@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "VertexEngine"
-version = "1.2rc1"
+version = "1.2rc2"
 description = "An SDK for Python Development."
 authors = [
   { name = "Tyrel Miguel", email = "annbasilan0828@gmail.com" }
@@ -20,6 +20,6 @@ dependencies = [
 
 [project.urls]
 Documentation = "https://vertexenginedocs.netlify.app/"
-
+Homepage = "https://github.com/TyrelGomez/VertexEngine-Code"
 [tool.setuptools.packages.find]
 where = ["src"]
