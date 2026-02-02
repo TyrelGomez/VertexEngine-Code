@@ -3,10 +3,20 @@ VertexEngine is a GUI and Game Engine for python applications, it works best if 
 ## Offical Extensions:
 [VertexEngine-WebEngine](https://pypi.org/project/VertexEngine-WebEngine)
 [VertexEngine-CLI](https://pypi.org/project/VertexEngine-CLI/1.0/)
+## Help
+- The documentation is in the following link: (Documentation)["https://vertexenginedocs.netlify.app/"] for help.
+- Support Email: FinalFacility0828@gmail.com
 ## Community
-🚧 Discord coming soon!
-For now, open an issue or discussion.
-## Change Logs (1.0rc1 - 1.2rc3), NEW!
+🚧 Discord coming in TEN DAYS!
+For now, open an issue or discussion. if you get an error, go!
+## Change Logs (1.0rc1 - 1.3rc1), NEW!
+### 1.3rc1
+- No more docs for RCs as the new functions are ("expirimental")
+- Moved SimpleGUI and AdvancedVWidgets into VertexEngine.VertexWidgets
+- 10 Days before the discord server is launched!
+- Added:
+    - Responsive Layout (Adapts to screen size)
+    - Centered Layout (Anchors child widgets to the center)
 ### 1.2rc4
 - Final RC!
 - Docs will be updated on Feb 04, 2026.
@@ -69,9 +79,6 @@ Step 2: Wait a few min, don't worry if it takes 1 hr or more, it will finish
 
 Pygame or PyQt6 systems are compatible with Vertex so you can use pygame collision system or PyQt6's UI system in VertexEngine.
 
-## Help
-The documentation is in the following link: (Documentation)["https://vertexenginedocs.netlify.app/"] for help.
-
 ## Dependencies
 Vertex obviously has heavy dependencies since it's a game engine, the following requirements are:
 
@@ -82,7 +89,7 @@ Vertex obviously has heavy dependencies since it's a game engine, the following 
 | Python           | >=3.10                               |
 
 ## About Me ❔
-I Am a solo developer in Diliman, Quezon City that makes things for fun :) 77 Rd 1, 53 Rd 3 Bg-Asa QC Email: FinalFacility0828@gmail.com
+I Am a solo developer in Diliman, Quezon City that makes things for fun :) 77 Rd 1, 53 Rd 3 Bg-Asa QC
 
 ## 📄 License
 VertexEngine/Vertex is Managed by the MIT License. This license allows others to tweak the code. However, I would like my name be in the credits if you choose this as your starting ground for your next library.

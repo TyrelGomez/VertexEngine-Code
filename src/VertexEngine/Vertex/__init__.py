@@ -6,7 +6,6 @@ from PyQt6.QtWidgets import (
     QDialog, QLabel, QPushButton, QLineEdit
 )
 from PyQt6.QtCore import Qt
-
 # ------------------------
 # Base widget wrapper
 # ------------------------
@@ -41,6 +40,44 @@ class VWidget(QWidget):
 # ------------------------
 # Layout wrappers
 # ------------------------
+class ResponsiveLayout(QWidget):
+    def __init__(self, children, vertical_threshold=500):
+        super().__init__()
+        self.children = children
+        self.vertical_threshold = vertical_threshold
+        self.current_layout = None
+        self.update_layout()
+        self.resizeEvent = self.on_resize  # override resize
+
+    def update_layout(self):
+        # Remove old layout
+        if self.current_layout:
+            QWidget().setLayout(self.current_layout)
+
+        width = self.width()
+        if width < self.vertical_threshold:
+            self.current_layout = QVBoxLayout()
+        else:
+            self.current_layout = QHBoxLayout()
+
+        for w in self.children:
+            self.current_layout.addWidget(w)
+
+        self.setLayout(self.current_layout)
+
+    def on_resize(self, event):
+        self.update_layout()
+        super().resizeEvent(event)
+
+class CenterWidget(QWidget):
+    def __init__(self, child_widget):
+        super().__init__()
+        layout = QVBoxLayout()
+        layout.addStretch()
+        layout.addWidget(child_widget)
+        layout.addStretch()
+        self.setLayout(layout)
+
 class VBox(VWidget):
     """Vertical layout wrapper."""
 
