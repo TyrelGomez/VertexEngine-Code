@@ -7,7 +7,7 @@ VertexEngine is a GUI and Game Engine for python applications, it works best if 
 - The documentation is in the following link: (Documentation)["https://vertexenginedocs.netlify.app/"] for help.
 - Support Email: FinalFacility0828@gmail.com
 ## Community
-🚧 Discord coming in TEN DAYS!
+🚧 Discord coming in NINE DAYS!
 For now, open an issue or discussion. if you get an error, go!
 ## Change Logs (1.0rc1 - 1.3rc2), NEW!
 ### 1.3rc2
