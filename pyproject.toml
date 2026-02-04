@@ -1,7 +1,7 @@
 [project]
 name = "VertexEngine"
-version = "1.3rc4"
-description = "An SDK for Python Development."
+version = "1.3.0"
+description = "A high-performance SDK for Python Development."
 authors = [
   { name = "Tyrel Miguel", email = "annbasilan0828@gmail.com" }
 ]
@@ -9,8 +9,10 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 
+# Dependencies: pin latest compatible for PyQt6 and pygame
 dependencies = [
-  "pygame>=2.0",
+  "pygame-ce>=2.5.0; python_version >= '3.14'",  # optimized for 3.14+
+  "pygame>=2.6; python_version < '3.14'",   # fallback for <=3.13
   "PyQt6>=6.7"
 ]
 
@@ -19,5 +21,14 @@ Documentation = "https://vertexenginedocs.netlify.app/"
 Source = "https://github.com/TyrelGomez/VertexEngine-Code"
 Issues = "https://github.com/TyrelGomez/VertexEngine-Code/issues"
 Discord = "https://discord.com/channels/1468208686869643327/1468208687670890588"
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools]
+zip_safe = false  # avoids weird import issues on Windows
+include_package_data = true
+
+[tool.setuptools.entry-points.console_scripts]
+# if you later want CLI support
+vertexengine-cli = "VertexEngine.cli:main"
